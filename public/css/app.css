@@ -18,6 +18,12 @@
     --h3-size: clamp(1.5rem, 3vw, 2rem);
     --body-size: clamp(1rem, 2vw, 1.1rem);
     --small-size: clamp(0.875rem, 1.5vw, 1rem);
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --gradient-primary: linear-gradient(45deg, var(--primary-color), var(--info-color));
+    --overlay-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95));
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -1703,5 +1709,267 @@ p {
 
     body {
         padding-top: 0;
+    }
+}
+
+/* Görsel Efektler */
+.image-hover {
+    transition: var(--transition-base);
+    filter: brightness(1);
+}
+
+.image-hover:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+/* Kart Efektleri */
+.card {
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(0);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+/* Proje Kartları */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+}
+
+.project-card img {
+    transition: var(--transition-base);
+    filter: brightness(1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+.project-overlay {
+    background: var(--overlay-gradient);
+    opacity: 0;
+    transition: var(--transition-base);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Yetenek Kartları */
+.skill-card, .tech-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.skill-card:hover, .tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.skill-icon, .tech-card i {
+    transition: var(--transition-base);
+    color: var(--primary-color);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.skill-card:hover .skill-icon,
+.tech-card:hover i {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Profil Resmi Efektleri */
+.profile-image-wrapper {
+    position: relative;
+    transition: var(--transition-base);
+}
+
+.profile-image {
+    border-radius: 50%;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+    border: 4px solid white;
+}
+
+.profile-image:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.profile-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    opacity: 0.1;
+    z-index: -1;
+    transition: var(--transition-base);
+}
+
+.profile-image-wrapper:hover::after {
+    transform: scale(1.05);
+    opacity: 0.2;
+}
+
+/* Timeline Efektleri */
+.timeline-content {
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.timeline-dot {
+    transition: var(--transition-base);
+    box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.1);
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 6px rgba(108, 99, 255, 0.2);
+}
+
+/* Buton Efektleri */
+.btn {
+    transition: var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: var(--transition-base);
+}
+
+.btn:hover::after {
+    left: 100%;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* Badge Efektleri */
+.badge {
+    transition: var(--transition-base);
+}
+
+.tech-badges .badge {
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-badges .badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobil Optimizasyonlar */
+@media (max-width: 768px) {
+    .project-overlay {
+        opacity: 1;
+        background: var(--overlay-gradient);
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .skill-card:hover, 
+    .tech-card:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* Dokunmatik Cihaz Optimizasyonları */
+@media (hover: none) {
+    .project-overlay {
+        opacity: 1;
+    }
+    
+    .card:hover,
+    .project-card:hover,
+    .skill-card:hover,
+    .tech-card:hover {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* Animasyon Sınıfları */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Performans İyileştirmeleri */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 } 
