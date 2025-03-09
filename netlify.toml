@@ -1,5 +1,5 @@
 [build]
-  command = "cp .env.example .env && composer install && npm install && npm run build && php artisan key:generate"
+  command = "cp .env.example .env && composer install && npm install && npm run build && php artisan key:generate && mkdir -p scripts && php scripts/generate-static.php && cp -r public/static/* public/"
   publish = "public"
 
 [build.environment]
@@ -8,5 +8,22 @@
 
 [[redirects]]
   from = "/*"
-  to = "/index.php"
-  status = 200 
+  to = "/index.html"
+  status = 200
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.images]
+  compress = true 
