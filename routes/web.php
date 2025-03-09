@@ -11,3 +11,7 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+
+Route::get('/health', function () {
+    return response()->json(['status' => 'healthy'], 200);
+});
