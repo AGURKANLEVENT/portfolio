@@ -8,7 +8,7 @@
         <div class="row align-items-center">
             <div class="col-md-4 mb-4">
                 <div class="about-image-wrapper">
-                    <img src="{{ asset('images/resim.jpg') }}" 
+                    <img src="{{ asset('images/levent.jpg') }}" 
                          alt="Profil Fotoğrafı" 
                          class="img-fluid about-profile-image"
                          style="width: 300px; height: 300px; object-fit: cover; object-position: center 0%; border-radius: 50%; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
