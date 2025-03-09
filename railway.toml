@@ -9,7 +9,9 @@ restartPolicyMaxRetries = 10
 
 [[deploy.healthcheck]]
 path = "/health"
-interval = "30s"
-timeout = "10s"
+interval = "15s"
+timeout = "5s"
 retries = 3
-grace_period = "60s" 
+grace_period = "30s"
+method = "GET"
+port = "80" 

@@ -52,8 +52,9 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Create start script
 RUN echo '#!/bin/bash\n\
-sed -i "s/Listen 80/Listen ${PORT:-80}/" /etc/apache2/ports.conf\n\
-sed -i "s/:80/:${PORT:-80}/" /etc/apache2/sites-available/*.conf\n\
+PORT="${PORT:-80}"\n\
+sed -i "s/Listen 80/Listen ${PORT}/" /etc/apache2/ports.conf\n\
+sed -i "s/:80/:${PORT}/" /etc/apache2/sites-available/*.conf\n\
 exec apache2-foreground' > /usr/local/bin/start.sh \
     && chmod +x /usr/local/bin/start.sh
 
