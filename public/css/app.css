@@ -32,6 +32,7 @@ body {
     background-color: rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
     padding: 1rem 0;
+    height: 76px;
 }
 
 .navbar-brand {
@@ -70,11 +71,8 @@ body {
 
 /* Hero Section */
 .hero-section {
-    position: relative;
-    padding: 120px 0;
+    padding: 4rem 0;
     background: linear-gradient(135deg, var(--bg-soft) 0%, #e8edf5 100%);
-    overflow: hidden;
-    padding-top: 2rem;
 }
 
 .hero-section h1 {
@@ -699,10 +697,7 @@ footer {
 
 /* Hakkımda Sayfası Stilleri */
 .about-hero {
-    background: linear-gradient(135deg, var(--bg-soft) 0%, #e8edf5 100%);
-    position: relative;
-    overflow: hidden;
-    padding-top: 2rem;
+    padding: 4rem 0;
 }
 
 .text-gradient {
@@ -860,4 +855,29 @@ footer {
     .project-card:hover img {
         transform: scale(1.05);
     }
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 0;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 4rem 0;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 4rem 0;
+}
+
+/* About Section */
+.about-hero {
+    padding: 4rem 0;
 } 
