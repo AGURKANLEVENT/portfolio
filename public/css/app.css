@@ -71,14 +71,15 @@ body {
 
 /* Hero Section */
 .hero-section {
-    padding: 4rem 0;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
     background: linear-gradient(135deg, var(--bg-soft) 0%, #e8edf5 100%);
 }
 
 .hero-section h1 {
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-size: 2.8rem;
     line-height: 1.2;
 }
@@ -87,6 +88,7 @@ body {
     font-size: 1.25rem;
     color: var(--text-secondary);
     font-weight: 400;
+    margin-bottom: 2rem;
 }
 
 .hero-section img {
@@ -104,6 +106,8 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .skill-card:hover {
@@ -122,7 +126,7 @@ body {
 .skill-card .card-title {
     font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--text-primary);
 }
 
@@ -130,7 +134,13 @@ body {
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--text-secondary);
-    margin-bottom: 0;
+    margin-bottom: 2rem;
+}
+
+.skill-card .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
 }
 
 /* Skill Cards Animation */
@@ -174,6 +184,7 @@ body {
     height: 100%;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    margin-bottom: 2.5rem;
 }
 
 .project-card:hover {
@@ -201,7 +212,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 2.5rem;
 }
 
 .project-card:hover .project-overlay {
@@ -210,16 +221,21 @@ body {
 
 .project-content {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
 }
 
 .project-content .card-title {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-content .card-text {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .project-content .badge {
@@ -370,8 +386,8 @@ footer {
 
 /* Section Headers */
 .section-header {
-    font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem !important;
+    padding-top: 2rem;
     position: relative;
 }
 
@@ -715,25 +731,18 @@ footer {
 
 /* Section Başlıkları */
 .section-title {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
     position: relative;
 }
 
 .section-title .subtitle {
-    color: var(--primary-color);
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 0.5rem;
     display: block;
+    margin-bottom: 1rem;
+    color: #6c757d;
 }
 
 .section-title .title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin: 0;
+    margin-bottom: 1.5rem;
 }
 
 /* Projeler */
@@ -776,7 +785,7 @@ footer {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 2rem;
+    padding: 2.5rem;
 }
 
 .project-card:hover .project-overlay {
@@ -793,7 +802,7 @@ footer {
 .project-overlay .card-text {
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -864,7 +873,8 @@ section {
 
 /* Contact Section */
 .contact-section {
-    padding: 4rem 0;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
 }
 
 /* Projects Section */
@@ -880,4 +890,147 @@ section {
 /* About Section */
 .about-hero {
     padding: 4rem 0;
+}
+
+/* Genel Boşluk ve Hizalama Düzenlemeleri */
+.section-header {
+    margin-bottom: 3rem !important;
+    padding-top: 2rem;
+}
+
+.section-title {
+    margin-bottom: 3.5rem;
+}
+
+.section-title .subtitle {
+    display: block;
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+.section-title .title {
+    margin-bottom: 1.5rem;
+}
+
+/* Kartlar için Düzenlemeler */
+.card {
+    margin-bottom: 2rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    margin-bottom: 1.5rem;
+}
+
+.card-text {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Proje Kartları için Düzenlemeler */
+.project-card {
+    margin-bottom: 2.5rem;
+}
+
+.project-overlay {
+    padding: 2.5rem;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.project-content .card-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.project-content .card-text {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.tech-badges {
+    margin: 2rem 0;
+}
+
+.tech-badges .badge {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.project-button {
+    margin-top: 2rem;
+}
+
+/* Yetenek Kartları için Düzenlemeler */
+.skill-card {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.skill-card .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.skill-card .card-title {
+    margin-bottom: 1.5rem;
+}
+
+/* İletişim Formu Düzenlemeleri */
+.contact-section {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+}
+
+.contact-section .form-label {
+    margin-bottom: 0.75rem;
+}
+
+.contact-section .form-control {
+    margin-bottom: 1.5rem;
+}
+
+.contact-section .btn {
+    margin-top: 1rem;
+}
+
+/* Hero Bölümü Düzenlemeleri */
+.hero-section {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+}
+
+.hero-content h1 {
+    margin-bottom: 2rem;
+}
+
+.hero-content .lead {
+    margin-bottom: 2rem;
+}
+
+.hero-content p {
+    margin-bottom: 3rem;
+}
+
+/* CTA Bölümü Düzenlemeleri */
+.contact-cta {
+    padding: 5rem 0;
+    margin-top: 3rem;
+}
+
+.contact-cta h2 {
+    margin-bottom: 2rem;
+}
+
+.contact-cta .lead {
+    margin-bottom: 2.5rem;
 } 
