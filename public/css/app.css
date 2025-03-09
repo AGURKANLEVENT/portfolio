@@ -432,10 +432,10 @@ footer {
 }
 
 /* İletişim Form */
-.contact-form {
+.contact-form .form-control{
     border: 2px solid transparent;
     transition: all 0.3s ease;
-    padding: 0.8rem;
+    padding: 0.5rem;
 }
 
 .contact-form .form-control:focus {
