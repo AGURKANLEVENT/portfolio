@@ -42,54 +42,47 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <h1 class="text-center section-header mb-5">İletişime Geç</h1>
+                    <div class="contact-info text-center mb-5">
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-envelope text-primary me-2"></i>
+                            <a href="mailto:abdullahgurkanlevent@gmail.com" class="text-decoration-none">abdullahgurkanlevent@gmail.com</a>
+                        </div>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-phone text-primary me-2"></i>
+                            <a href="tel:+905324000496" class="text-decoration-none">+90 532 400 04 96</a>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                            <span>Bursa, Türkiye</span>
+                        </div>
+                        <div class="social-links mb-4">
+                            <a href="https://github.com/AGURKANLEVENT" target="_blank" class="me-3">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/abdullah-gurkan-levent" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
                     <div class="card contact-card fade-in">
                         <div class="card-body p-4 p-md-5">
-                            <div class="row">
-                                <div class="col-md-6 mb-4 mb-md-0">
-                                    <div class="contact-info">
-                                        <h3 class="h4 mb-4">İletişim Bilgileri</h3>
-                                        <div class="contact-item mb-3">
-                                            <i class="fas fa-envelope text-primary me-2"></i>
-                                            <a href="mailto:abdullahgurkanlevent@gmail.com" class="text-decoration-none">abdullahgurkanlevent@gmail.com</a>
-                                        </div>
-                                        <div class="contact-item mb-3">
-                                            <i class="fas fa-phone text-primary me-2"></i>
-                                            <a href="tel:+905324000496" class="text-decoration-none">+90 532 400 04 96</a>
-                                        </div>
-                                        <div class="contact-item mb-4">
-                                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                                            <span>Bursa, Türkiye</span>
-                                        </div>
-                                        <div class="social-links">
-                                            <a href="https://github.com/AGURKANLEVENT" target="_blank" class="me-3">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                            <a href="https://www.linkedin.com/in/abdullah-gurkan-levent" target="_blank">
-                                                <i class="fab fa-linkedin"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+                            <form id="contactForm" class="contact-form">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Adınız</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
                                 </div>
-                                <div class="col-md-6">
-                                    <form id="contactForm" class="contact-form">
-                                        <div class="mb-3">
-                                            <label for="name" class="form-label">Adınız</label>
-                                            <input type="text" class="form-control" id="name" name="name" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label">E-posta Adresiniz</label>
-                                            <input type="email" class="form-control" id="email" name="email" required>
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="message" class="form-label">Mesajınız</label>
-                                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary w-100">
-                                            <i class="fas fa-paper-plane me-2"></i>Mesaj Gönder
-                                        </button>
-                                    </form>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-posta Adresiniz</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
-                            </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label">Mesajınız</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Mesaj Gönder
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
