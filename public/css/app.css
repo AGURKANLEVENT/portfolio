@@ -96,15 +96,23 @@ body {
     color: var(--primary-color);
 }
 
-.nav-link {
-    color: var(--text-secondary);
-    font-weight: 600;
-    padding: 0.75rem 1.25rem;
-    transition: color 0.3s ease;
+.navbar-nav .nav-link {
+    font-weight: 500;
+    position: relative;
 }
 
-.nav-link:hover, .nav-link.active {
-    color: var(--primary-color);
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.75rem;
+    right: 0.75rem;
+    height: 2px;
+    background-color: var(--bs-primary);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--bs-primary);
 }
 
 /* Sections */
@@ -2179,129 +2187,6 @@ p {
     font-size: 1.25rem;
     font-weight: 500;
     color: var(--text-secondary);
-}
-
-/* Footer Yazı Stili */
-footer p {
-    font-weight: 500;
-}
-
-/* Form Etiketleri */
-.form-label {
-    font-weight: 500;
-    color: var(--text-primary);
-}
-
-/* Deneyim Timeline */
-.experience-header h4 {
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.company {
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.period {
-    font-weight: 500;
-    color: var(--text-secondary);
-}
-
-.experience-list li {
-    color: var(--text-secondary);
-    line-height: 1.8;
-}
-
-/* Blog Kartları */
-.blog-card .card-title {
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.blog-meta {
-    font-weight: 500;
-    color: var(--text-secondary);
-}
-
-/* Section Başlıkları */
-.section-header {
-    font-weight: 700;
-    color: var(--text-primary);
-    letter-spacing: -0.5px;
-}
-
-.section-title .subtitle {
-    font-weight: 500;
-    color: var(--text-secondary);
-}
-
-/* Kart İçeriği */
-.card-title {
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.card-text {
-    color: var(--text-secondary);
-    line-height: 1.8;
-}
-
-/* Section Başlıkları */
-.section-header {
-    font-weight: 700;
-    color: var(--text-primary);
-    letter-spacing: -0.5px;
-}
-
-.section-title .subtitle {
-    font-weight: 500;
-    color: var(--text-secondary);
-}
-
-/* Deneyim Timeline */
-.experience-header h4 {
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.company {
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.period {
-    font-weight: 500;
-    color: var(--text-secondary);
-}
-
-.experience-list li {
-    color: var(--text-secondary);
-    line-height: 1.8;
-}
-
-/* Blog Kartları */
-.blog-card .card-title {
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.blog-meta {
-    font-weight: 500;
-    color: var(--text-secondary);
-}
-
-/* Form Etiketleri */
-.form-label {
-    font-weight: 500;
-    color: var(--text-primary);
-}
-
-/* Buton Yazı Stili */
-.btn {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.3px;
 }
 
 /* Footer Yazı Stili */
