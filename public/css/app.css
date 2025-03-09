@@ -13,6 +13,166 @@
     --text-secondary: #5c6c7c;
     --nav-bg: rgba(255, 255, 255, 0.95);
     --card-bg: #ffffff;
+    --footer-bg: #2c3e50;
+    --footer-text: #ffffff;
+    --hero-gradient: linear-gradient(135deg, var(--bg-soft) 0%, #e8edf5 100%);
+    --timeline-dot-bg: var(--primary-color);
+    --timeline-line-bg: rgba(108, 99, 255, 0.2);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Karanlık Mod */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-soft: #1a1a1a;
+        --text-primary: #ffffff;
+        --text-secondary: #b0b0b0;
+        --nav-bg: rgba(26, 26, 26, 0.95);
+        --card-bg: #2d2d2d;
+        --dark-color: #ffffff;
+        --footer-bg: #2d2d2d;
+        --footer-text: #ffffff;
+        --hero-gradient: linear-gradient(135deg, var(--bg-soft) 0%, #2d2d2d 100%);
+        --timeline-dot-bg: var(--primary-color);
+        --timeline-line-bg: rgba(255, 255, 255, 0.1);
+        --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+        background-color: var(--bg-soft);
+        color: var(--text-primary);
+    }
+
+    .navbar {
+        background-color: var(--nav-bg) !important;
+    }
+
+    .nav-link {
+        color: var(--text-secondary);
+    }
+
+    .nav-link:hover, .nav-link.active {
+        color: var(--primary-color);
+    }
+
+    .card {
+        background-color: var(--card-bg);
+        color: var(--text-primary);
+        box-shadow: var(--card-shadow);
+    }
+
+    .card:hover {
+        box-shadow: var(--card-hover-shadow);
+    }
+
+    .form-control {
+        background-color: var(--card-bg);
+        color: var(--text-primary);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .form-control:focus {
+        background-color: var(--card-bg);
+        color: var(--text-primary);
+        border-color: var(--primary-color);
+    }
+
+    .btn-outline-dark {
+        color: var(--text-primary);
+        border-color: var(--text-primary);
+    }
+
+    .btn-outline-dark:hover {
+        background-color: var(--text-primary);
+        color: var(--bg-soft);
+    }
+
+    footer {
+        background-color: var(--footer-bg) !important;
+        color: var(--footer-text);
+    }
+
+    .project-overlay {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.95) 100%);
+    }
+
+    .tech-badge {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-primary);
+    }
+
+    .timeline::before {
+        background-color: var(--timeline-line-bg);
+    }
+
+    .timeline-dot {
+        background-color: var(--timeline-dot-bg);
+        border-color: var(--bg-soft);
+    }
+
+    .section-header::after {
+        background-color: var(--primary-color);
+    }
+
+    .hero-section {
+        background: var(--hero-gradient);
+    }
+
+    .blog-card .card-title {
+        color: var(--text-primary);
+    }
+
+    .blog-card .card-text {
+        color: var(--text-secondary);
+    }
+
+    .blog-meta {
+        color: var(--text-secondary);
+    }
+
+    .social-links a {
+        background-color: var(--card-bg);
+        color: var(--text-primary);
+    }
+
+    .social-links a:hover {
+        background-color: var(--primary-color);
+        color: #ffffff;
+    }
+
+    .tech-card {
+        background-color: var(--card-bg);
+    }
+
+    .tech-card .progress {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .experience-content {
+        background-color: var(--card-bg);
+    }
+
+    .experience-header h4 {
+        color: var(--text-primary);
+    }
+
+    .experience-list li {
+        color: var(--text-secondary);
+    }
+
+    .section-title .subtitle {
+        color: var(--text-secondary);
+    }
+
+    .about-text {
+        color: var(--text-secondary);
+    }
+
+    .typed-container {
+        color: var(--text-primary);
+    }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
