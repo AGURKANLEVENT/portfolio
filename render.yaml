@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: portfolio
+    env: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: APP_NAME
+        value: Portfolio
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        fromService:
+          type: web
+          name: portfolio
+          envVarKey: APP_KEY
+      - key: DB_CONNECTION
+        value: mysql 

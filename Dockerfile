@@ -39,7 +39,7 @@ COPY .env.example .env
 RUN sed -i 's/APP_ENV=local/APP_ENV=production/' .env \
     && sed -i 's/APP_DEBUG=true/APP_DEBUG=false/' .env
 
-# Generate application key
+# Generate application key if not exists
 RUN php artisan key:generate --force
 
 # Set permissions
@@ -55,6 +55,9 @@ RUN echo '#!/bin/bash\n\
 PORT="${PORT:-80}"\n\
 sed -i "s/Listen 80/Listen ${PORT}/" /etc/apache2/ports.conf\n\
 sed -i "s/:80/:${PORT}/" /etc/apache2/sites-available/*.conf\n\
+php artisan config:cache\n\
+php artisan route:cache\n\
+php artisan view:cache\n\
 exec apache2-foreground' > /usr/local/bin/start.sh \
     && chmod +x /usr/local/bin/start.sh
 
