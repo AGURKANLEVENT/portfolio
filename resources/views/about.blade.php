@@ -36,14 +36,14 @@
 <div class="container py-5">
     <div class="row">
         <div class="col-lg-6 mb-5">
-            <div class="section-title fade-up">
+            <div class="section-title">
                 <span class="subtitle">Eğitim Geçmişi</span>
                 <h2 class="title">Eğitim</h2>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content fade-up">
+                    <div class="timeline-content slide-up">
                         <h5>Bilgisayar Programcılığı</h5>
                         <p class="text-muted">Erzurum Atatürk Üniversitesi</p>
                         <span class="timeline-date">2022 - Devam Ediyor</span>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content fade-up" style="animation-delay: 0.2s">
+                    <div class="timeline-content slide-up" style="animation-delay: 0.2s">
                         <h5>Dış Ticaret</h5>
                         <p class="text-muted">Eskişehir Anadolu Üniversitesi</p>
                         <span class="timeline-date">2020 - Mezun</span>
@@ -61,13 +61,13 @@
         </div>
 
         <div class="col-lg-6 mb-5">
-            <div class="section-title fade-up" style="animation-delay: 0.2s">
+            <div class="section-title">
                 <span class="subtitle">Teknoloji Yığınım</span>
                 <h2 class="title">Teknolojiler</h2>
             </div>
             <div class="row g-4">
                 <div class="col-6">
-                    <div class="tech-card fade-up">
+                    <div class="tech-card slide-up">
                         <i class="fab fa-php"></i>
                         <h4>PHP</h4>
                         <div class="progress">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="tech-card fade-up" style="animation-delay: 0.2s">
+                    <div class="tech-card slide-up" style="animation-delay: 0.2s">
                         <i class="fab fa-laravel"></i>
                         <h4>Laravel</h4>
                         <div class="progress">
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="tech-card fade-up" style="animation-delay: 0.3s">
+                    <div class="tech-card slide-up" style="animation-delay: 0.3s">
                         <i class="fas fa-database"></i>
                         <h4>MySQL</h4>
                         <div class="progress">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="tech-card fade-up" style="animation-delay: 0.4s">
+                    <div class="tech-card slide-up" style="animation-delay: 0.4s">
                         <i class="fas fa-code-branch"></i>
                         <h4>REST API</h4>
                         <div class="progress">
@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="tech-card fade-up" style="animation-delay: 0.5s">
+                    <div class="tech-card slide-up" style="animation-delay: 0.5s">
                         <i class="fab fa-golang"></i>
                         <h4>Go</h4>
                         <div class="progress">
@@ -117,12 +117,12 @@
 
     <div class="row">
         <div class="col-12">
-            <div class="section-title fade-up">
+            <div class="section-title">
                 <span class="subtitle">Profesyonel Geçmiş</span>
                 <h2 class="title">Deneyim</h2>
             </div>
             <div class="experience-timeline">
-                <div class="experience-item fade-up">
+                <div class="experience-item fade-in">
                     <div class="experience-content">
                         <div class="experience-header">
                             <h4>Satış Takım Lideri</h4>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item fade-up">
+                <div class="experience-item fade-in">
                     <div class="experience-content">
                         <div class="experience-header">
                             <h4>Mağaza Sorumlusu</h4>
@@ -154,7 +154,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item fade-up">
+                <div class="experience-item fade-in">
                     <div class="experience-content">
                         <div class="experience-header">
                             <h4>Mağaza Yöneticisi</h4>
