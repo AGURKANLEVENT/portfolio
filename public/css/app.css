@@ -248,11 +248,20 @@ section {
 
 /* Contact Section */
 .contact-section {
-    padding: 4rem 0 6rem;
-    min-height: calc(100vh - 76px - 60px);
+    padding: 3rem 0;
+    min-height: auto;
     background: var(--bg-soft);
     display: flex;
     align-items: center;
+}
+
+.contact-card {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
 }
 
 .contact-info {
@@ -261,27 +270,132 @@ section {
     border-radius: 15px;
     box-shadow: var(--card-shadow);
     margin-bottom: 2rem;
-    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.form-control {
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+    background-color: #fff;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
 }
 
 .contact-item {
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
 .contact-item a {
     color: var(--text-primary);
-    text-decoration: none;
     transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 .contact-item i {
-    color: var(--primary-color);
-    margin-right: 10px;
     font-size: 1.2rem;
     width: 30px;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--light-color);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 2rem 0;
+    }
+    
+    .contact-card, .contact-info {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .contact-form {
+        padding: 0;
+    }
+    
+    .form-control {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+    
+    .contact-item {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
 }
 
 /* Footer */
