@@ -29,23 +29,26 @@ body {
 /* Navbar Stilleri */
 .navbar {
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.9) !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    padding: 1rem 0;
-    height: 76px;
+    padding: 1.25rem 0;
+    height: 80px;
+    margin-bottom: 2rem;
 }
 
 .navbar-brand {
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--primary-color);
+    padding: 0.5rem 0;
 }
 
 .nav-link {
     color: var(--text-secondary);
     font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
+    padding: 0.75rem 1.25rem;
+    margin: 0 0.25rem;
+    transition: all 0.3s ease;
     position: relative;
 }
 
@@ -71,15 +74,15 @@ body {
 
 /* Hero Section */
 .hero-section {
-    padding-top: 8rem;
-    padding-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     background: linear-gradient(135deg, var(--bg-soft) 0%, #e8edf5 100%);
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .hero-content h1 {
@@ -216,7 +219,7 @@ body {
 }
 
 .project-card {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .project-card:hover {
@@ -232,13 +235,13 @@ body {
 }
 
 .project-overlay {
-    padding: 3rem;
+    padding: 2.5rem;
 }
 
 .project-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .project-content .card-title {
@@ -377,9 +380,10 @@ body {
 /* Özel Buton Stilleri */
 .btn {
     font-weight: 500;
-    padding: 0.8rem 1.8rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 12px;
     transition: all 0.3s ease;
+    margin: 0.5rem;
 }
 
 .btn-primary {
@@ -438,7 +442,7 @@ footer {
 
 /* Section Headers */
 .section-header {
-    margin-bottom: 3rem !important;
+    margin-bottom: 3rem;
     padding-top: 2rem;
     position: relative;
 }
@@ -551,7 +555,7 @@ footer {
 /* Deneyim Timeline */
 .experience-timeline {
     position: relative;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .experience-item {
@@ -765,7 +769,8 @@ footer {
 
 /* Hakkımda Sayfası Stilleri */
 .about-hero {
-    padding: 4rem 0;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
 }
 
 .text-gradient {
@@ -920,13 +925,14 @@ footer {
 
 /* Sections */
 section {
-    padding: 4rem 0;
+    padding: 5rem 0;
+    margin: 2rem 0;
 }
 
 /* Contact Section */
 .contact-section {
-    padding-top: 7rem;
-    padding-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 /* Projects Section */
@@ -941,13 +947,13 @@ section {
 
 /* About Section */
 .about-hero {
-    padding: 4rem 0;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
 }
 
 /* Genel Boşluk ve Hizalama Düzenlemeleri */
 .section-header {
-    margin-bottom: 3rem !important;
-    padding-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 .section-title {
@@ -1039,8 +1045,8 @@ section {
 
 /* İletişim Formu Düzenlemeleri */
 .contact-section {
-    padding-top: 7rem;
-    padding-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .contact-section .form-label {
@@ -1057,8 +1063,8 @@ section {
 
 /* Hero Bölümü Düzenlemeleri */
 .hero-section {
-    padding-top: 8rem;
-    padding-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .hero-content h1 {
@@ -1094,4 +1100,75 @@ section {
 .contact-cta .btn {
     padding: 1.2rem 2.5rem;
     font-size: 1.1rem;
+}
+
+/* Section Spacing */
+section {
+    padding: 5rem 0;
+    margin: 2rem 0;
+}
+
+/* Card Spacing */
+.card {
+    margin-bottom: 2rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Button Spacing */
+.btn {
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+}
+
+/* Form Spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    margin-bottom: 0.75rem;
+}
+
+/* Container Padding */
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Project Card Spacing */
+.project-card {
+    margin-bottom: 2.5rem;
+}
+
+.project-overlay {
+    padding: 2.5rem;
+}
+
+.project-content {
+    gap: 1.5rem;
+}
+
+/* Contact Section Spacing */
+.contact-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+/* About Section Spacing */
+.about-hero {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+.experience-timeline {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.tech-stack {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 } 
