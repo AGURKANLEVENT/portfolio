@@ -14,21 +14,5 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 Route::get('/health', function () {
-    $databaseStatus = true;
-    try {
-        DB::connection()->getPdo();
-    } catch (\Exception $e) {
-        $databaseStatus = false;
-    }
-
-    $status = [
-        'status' => 'healthy',
-        'timestamp' => now()->toIso8601String(),
-        'services' => [
-            'database' => $databaseStatus ? 'connected' : 'disconnected',
-            'web' => 'running'
-        ]
-    ];
-
-    return response()->json($status, $databaseStatus ? 200 : 503);
+    return response('OK', 200);
 });
