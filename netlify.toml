@@ -9,11 +9,4 @@
 [[redirects]]
   from = "/*"
   to = "/index.php"
-  status = 200
-
-main
-
-APP_NAME=Portfolio
-APP_ENV=production
-APP_DEBUG=false
-APP_URL=https://abdullah-gurkan-levent-portfolio.netlify.app 
+  status = 200 
