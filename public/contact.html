@@ -36,40 +36,50 @@
 
     <section class="contact-section">
         <div class="container">
-            <h1 class="text-center section-header mb-5">İletişim</h1>
+            <h1 class="text-center mb-5">İletişime Geç</h1>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <div class="card shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="mb-4">
-                                <h5 class="mb-3">İletişim Bilgileri</h5>
-                                <p><i class="fas fa-envelope me-2"></i>Email: agurkanlevent@gmail.com</p>
-                                <p><i class="fas fa-map-marker-alt me-2"></i>Konum: İstanbul, Türkiye</p>
-                            </div>
-                            <div class="social-links mb-4">
-                                <h5 class="mb-3">Sosyal Medya</h5>
-                                <a href="https://github.com/AGURKANLEVENT" class="btn btn-outline-dark me-2" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/abdullah-gürkan-levent-" class="btn btn-outline-primary me-2" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
                             <form id="contact-form" class="needs-validation" novalidate>
                                 <div class="mb-3">
-                                    <label for="name" class="form-label">Ad Soyad</label>
+                                    <label for="name" class="form-label">Adınız</label>
                                     <input type="text" class="form-control" id="name" name="name" required>
                                 </div>
+
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
+                                    <label for="email" class="form-label">E-posta Adresiniz</label>
                                     <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
+
                                 <div class="mb-3">
-                                    <label for="message" class="form-label">Mesaj</label>
-                                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                                    <label for="message" class="form-label">Mesajınız</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Gönder</button>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Mesaj Gönder
+                                    </button>
+                                </div>
                             </form>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <div class="text-center">
+                                <i class="fas fa-user fa-3x text-primary mb-3"></i>
+                                <h5>İsim</h5>
+                                <p>Abdullah Gürkan Levent</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-center">
+                                <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                                <h5>E-posta</h5>
+                                <p><a href="mailto:abdullahgurkanlevent@gmail.com" class="text-decoration-none">abdullahgurkanlevent@gmail.com</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
