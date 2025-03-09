@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.php"
+  status = 200
+
+[build.environment]
+  PHP_VERSION = "8.2"
+  NODE_VERSION = "18" 
