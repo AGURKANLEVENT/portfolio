@@ -29,11 +29,10 @@ body {
 /* Navbar Stilleri */
 .navbar {
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.95) !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    padding: 1.25rem 0;
-    height: 80px;
-    margin-bottom: 2rem;
+    padding: 1rem 0;
+    height: 76px;
 }
 
 .navbar-brand {
@@ -74,8 +73,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 4rem 0;
     background: linear-gradient(135deg, var(--bg-soft) 0%, #e8edf5 100%);
 }
 
@@ -127,7 +125,7 @@ body {
 
 /* Yetenekler Section */
 .skills-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 .skills-section .section-header {
@@ -211,7 +209,7 @@ body {
 
 /* Projeler */
 .projects-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 .projects-section .section-header {
@@ -772,8 +770,7 @@ footer {
 
 /* Hakkımda Sayfası Stilleri */
 .about-hero {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding: 4rem 0;
 }
 
 .text-gradient {
@@ -928,14 +925,13 @@ footer {
 
 /* Sections */
 section {
-    padding: 5rem 0;
+    padding: 4rem 0;
     margin: 2rem 0;
 }
 
 /* Contact Section */
 .contact-section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 4rem 0;
 }
 
 /* Projects Section */
@@ -950,8 +946,7 @@ section {
 
 /* About Section */
 .about-hero {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding: 4rem 0;
 }
 
 /* Genel Boşluk ve Hizalama Düzenlemeleri */
@@ -1048,8 +1043,7 @@ section {
 
 /* İletişim Formu Düzenlemeleri */
 .contact-section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 4rem 0;
 }
 
 .contact-section .form-label {
@@ -1066,8 +1060,7 @@ section {
 
 /* Hero Bölümü Düzenlemeleri */
 .hero-section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 4rem 0;
 }
 
 .hero-content h1 {
@@ -1107,7 +1100,7 @@ section {
 
 /* Section Spacing */
 section {
-    padding: 5rem 0;
+    padding: 4rem 0;
     margin: 2rem 0;
 }
 
@@ -1156,14 +1149,12 @@ section {
 
 /* Contact Section Spacing */
 .contact-section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 4rem 0;
 }
 
 /* About Section Spacing */
 .about-hero {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding: 4rem 0;
 }
 
 .experience-timeline {
