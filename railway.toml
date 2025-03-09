@@ -7,10 +7,14 @@ numReplicas = 1
 sleepApplication = false
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
+healthcheckEnabled = true
+healthcheckCommand = "curl --fail http://localhost:${PORT}/health || exit 1"
+startupCommand = "apache2-foreground"
 
-[deploy.healthcheck]
+[[deploy.healthcheck]]
 path = "/health"
-interval = "30s"
-timeout = "10s"
-retries = 3
-grace_period = "120s" 
+interval = "15s"
+timeout = "5s"
+retries = 5
+grace_period = "30s"
+port = "80" 

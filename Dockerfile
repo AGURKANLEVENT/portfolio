@@ -52,15 +52,22 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Create start script
 RUN echo '#!/bin/bash\n\
-sed -i "s/Listen 80/Listen ${PORT:-80}/" /etc/apache2/ports.conf\n\
-sed -i "s/:80/:${PORT:-80}/" /etc/apache2/sites-available/*.conf\n\
+PORT="${PORT:-80}"\n\
+sed -i "s/Listen 80/Listen ${PORT}/" /etc/apache2/ports.conf\n\
+sed -i "s/:80/:${PORT}/" /etc/apache2/sites-available/*.conf\n\
+php artisan config:cache\n\
+php artisan route:cache\n\
+php artisan view:cache\n\
 apache2-foreground' > /usr/local/bin/start.sh \
     && chmod +x /usr/local/bin/start.sh
 
-# Cache Laravel configuration
-RUN php artisan config:cache \
-    && php artisan route:cache \
-    && php artisan view:cache
+# Add health check script
+RUN echo '#!/bin/bash\n\
+curl -f http://localhost:${PORT:-80}/health || exit 1' > /usr/local/bin/health.sh \
+    && chmod +x /usr/local/bin/health.sh
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD /usr/local/bin/health.sh
 
 EXPOSE 80
 
