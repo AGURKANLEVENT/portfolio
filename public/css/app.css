@@ -1,23 +1,23 @@
 /* Genel Stiller */
 :root {
-    --primary-color: #6c63ff;
-    --secondary-color: #8f8f8f;
-    --success-color: #4caf50;
-    --info-color: #64b5f6;
-    --warning-color: #ffd54f;
-    --danger-color: #ff5252;
-    --light-color: #f8f9fa;
-    --dark-color: #2c3e50;
-    --bg-soft: #f7f9fc;
-    --text-primary: #2c3e50;
-    --text-secondary: #5c6c7c;
-    --nav-bg: rgba(255, 255, 255, 0.95);
-    --card-bg: #ffffff;
-    --footer-bg: #2c3e50;
-    --footer-text: #ffffff;
-    --hero-gradient: linear-gradient(135deg, var(--bg-soft) 0%, #e8edf5 100%);
+    --primary-color: #4CAF50;  /* Canlı yeşil */
+    --secondary-color: #FF9800;  /* Sıcak turuncu */
+    --success-color: #2E7D32;  /* Koyu yeşil */
+    --info-color: #03A9F4;  /* Parlak mavi */
+    --warning-color: #FFC107;  /* Canlı sarı */
+    --danger-color: #F44336;  /* Canlı kırmızı */
+    --light-color: #F5F5F5;  /* Açık gri */
+    --dark-color: #2C3E50;  /* Koyu lacivert */
+    --bg-soft: #FAFAFA;  /* Yumuşak beyaz */
+    --text-primary: #333333;  /* Koyu gri */
+    --text-secondary: #666666;  /* Orta gri */
+    --nav-bg: rgba(255, 255, 255, 0.98);  /* Şeffaf beyaz */
+    --card-bg: #FFFFFF;  /* Beyaz */
+    --footer-bg: #4CAF50;  /* Ana renk ile uyumlu */
+    --footer-text: #FFFFFF;  /* Beyaz */
+    --hero-gradient: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);  /* Yeşil tonları */
     --timeline-dot-bg: var(--primary-color);
-    --timeline-line-bg: rgba(108, 99, 255, 0.2);
+    --timeline-line-bg: rgba(76, 175, 80, 0.2);  /* Ana renk ile uyumlu */
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
@@ -25,15 +25,15 @@
 /* Karanlık Mod */
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-soft: #1a1a1a;
-        --text-primary: #ffffff;
-        --text-secondary: #b0b0b0;
-        --nav-bg: rgba(26, 26, 26, 0.95);
-        --card-bg: #2d2d2d;
-        --dark-color: #ffffff;
-        --footer-bg: #2d2d2d;
-        --footer-text: #ffffff;
-        --hero-gradient: linear-gradient(135deg, var(--bg-soft) 0%, #2d2d2d 100%);
+        --bg-soft: #1E1E1E;  /* Yumuşak siyah */
+        --text-primary: #FFFFFF;  /* Beyaz */
+        --text-secondary: #BDBDBD;  /* Açık gri */
+        --nav-bg: rgba(30, 30, 30, 0.98);  /* Şeffaf siyah */
+        --card-bg: #2D2D2D;  /* Koyu gri */
+        --dark-color: #FFFFFF;  /* Beyaz */
+        --footer-bg: #2D2D2D;  /* Koyu gri */
+        --footer-text: #FFFFFF;  /* Beyaz */
+        --hero-gradient: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);  /* Koyu yeşil tonları */
         --timeline-dot-bg: var(--primary-color);
         --timeline-line-bg: rgba(255, 255, 255, 0.1);
         --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
