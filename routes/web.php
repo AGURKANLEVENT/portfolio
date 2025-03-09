@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
@@ -13,5 +14,21 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 Route::get('/health', function () {
-    return response()->json(['status' => 'healthy'], 200);
+    $databaseStatus = true;
+    try {
+        DB::connection()->getPdo();
+    } catch (\Exception $e) {
+        $databaseStatus = false;
+    }
+
+    $status = [
+        'status' => 'healthy',
+        'timestamp' => now()->toIso8601String(),
+        'services' => [
+            'database' => $databaseStatus ? 'connected' : 'disconnected',
+            'web' => 'running'
+        ]
+    ];
+
+    return response()->json($status, $databaseStatus ? 200 : 503);
 });
