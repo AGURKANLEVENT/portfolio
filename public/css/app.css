@@ -154,14 +154,13 @@ section {
     background: var(--card-bg);
     box-shadow: var(--card-shadow);
     transition: all 0.4s ease;
-    height: auto;
-    margin-bottom: 1.5rem;
-    padding: 0;
+    height: 100%;
+    margin-bottom: 0;
 }
 
 .project-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -179,11 +178,11 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: var(--card-hover-shadow);
 }
 
@@ -197,21 +196,22 @@ section {
 
 .project-content {
     text-align: center;
-    padding: 1rem;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .project-content .card-title {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .project-content .card-text {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .project-content .badge {
@@ -238,7 +238,7 @@ section {
     border-radius: 8px;
     font-weight: 500;
     transition: all 0.3s ease;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .project-content .btn-light:hover {
@@ -863,21 +863,29 @@ footer p {
     text-align: center;
 }
 
+/* Row Spacing */
+.row.g-4 {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+    margin: 0;
+}
+
+/* Project Cards */
 .project-card {
     position: relative;
     overflow: hidden;
     border: none;
     border-radius: 16px;
-    background: white;
+    background: var(--card-bg);
     box-shadow: var(--card-shadow);
     transition: all 0.4s ease;
     height: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .project-card img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -899,8 +907,8 @@ footer p {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
 }
 
 .project-card:hover .project-overlay {
@@ -913,26 +921,27 @@ footer p {
 
 .project-content {
     text-align: center;
-    padding: 1rem;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .project-content .card-title {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .project-content .card-text {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
 
 .project-content .badge {
-    font-size: 0.85rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 20px;
     font-weight: 500;
     background: rgba(255, 255, 255, 0.95);
@@ -954,7 +963,7 @@ footer p {
     border-radius: 8px;
     font-weight: 500;
     transition: all 0.3s ease;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .project-content .btn-light:hover {
@@ -963,49 +972,51 @@ footer p {
     transform: translateY(-2px);
 }
 
-/* Mobil Görünüm için Düzenlemeler */
 @media (max-width: 768px) {
     .projects-section {
         padding: 2rem 0;
     }
     
+    .row.g-4 {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 1.5rem;
+    }
+    
     .project-card {
-        margin-bottom: 1.5rem;
+        margin-bottom: 0;
+    }
+    
+    .project-card img {
+        height: 200px;
     }
     
     .project-overlay {
         opacity: 1;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.95) 100%);
         padding: 1.5rem;
     }
     
     .project-content .card-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
     }
     
     .project-content .card-text {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         margin-bottom: 1rem;
     }
     
     .project-content .badge {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
     }
     
     .project-card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-3px);
     }
     
     .project-card:hover img {
-        transform: scale(1.02);
+        transform: scale(1.03);
     }
-}
-
-/* Row Spacing */
-.row.g-4 {
-    --bs-gutter-x: 2rem;
-    --bs-gutter-y: 2rem;
 }
 
 /* Sosyal Medya İkonları */
