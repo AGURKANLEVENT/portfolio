@@ -1,5 +1,5 @@
 [build]
-  command = "cp .env.example .env && composer install && npm install && npm run build && php artisan key:generate && mkdir -p scripts && php scripts/generate-static.php && cp -r public/static/* public/"
+  command = "cp .env.example .env && composer install && npm install && npm run build && php artisan key:generate"
   publish = "public"
 
 [build.environment]
@@ -10,6 +10,22 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/build/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
 
 [build.processing]
   skip_processing = false
