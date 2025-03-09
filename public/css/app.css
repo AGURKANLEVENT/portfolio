@@ -1,181 +1,29 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 /* Genel Stiller */
 :root {
-    --primary-color: #4CAF50;  /* Canlı yeşil */
-    --secondary-color: #FF9800;  /* Sıcak turuncu */
-    --success-color: #2E7D32;  /* Koyu yeşil */
-    --info-color: #03A9F4;  /* Parlak mavi */
-    --warning-color: #FFC107;  /* Canlı sarı */
-    --danger-color: #F44336;  /* Canlı kırmızı */
-    --light-color: #F5F5F5;  /* Açık gri */
-    --dark-color: #2C3E50;  /* Koyu lacivert */
-    --bg-soft: #FAFAFA;  /* Yumuşak beyaz */
-    --text-primary: #333333;  /* Koyu gri */
-    --text-secondary: #666666;  /* Orta gri */
-    --nav-bg: rgba(255, 255, 255, 0.98);  /* Şeffaf beyaz */
-    --card-bg: #FFFFFF;  /* Beyaz */
-    --footer-bg: #4CAF50;  /* Ana renk ile uyumlu */
-    --footer-text: #FFFFFF;  /* Beyaz */
-    --hero-gradient: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);  /* Yeşil tonları */
+    --primary-color: #4CAF50;
+    --secondary-color: #FF9800;
+    --success-color: #2E7D32;
+    --info-color: #03A9F4;
+    --warning-color: #FFC107;
+    --danger-color: #F44336;
+    --light-color: #F5F5F5;
+    --dark-color: #2d3436;  /* Daha yumuşak koyu renk */
+    --bg-soft: #FFFFFF;
+    --text-primary: #2d3436;  /* Ana metin rengi */
+    --text-secondary: #636e72;  /* İkincil metin rengi */
+    --nav-bg: rgba(255, 255, 255, 0.98);
+    --card-bg: #FFFFFF;
+    --footer-bg: #4CAF50;
+    --footer-text: #FFFFFF;
+    --hero-gradient: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
     --timeline-dot-bg: var(--primary-color);
-    --timeline-line-bg: rgba(76, 175, 80, 0.2);  /* Ana renk ile uyumlu */
+    --timeline-line-bg: rgba(76, 175, 80, 0.2);
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
-
-/* Karanlık Mod */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-soft: #1E1E1E;  /* Yumuşak siyah */
-        --text-primary: #FFFFFF;  /* Beyaz */
-        --text-secondary: #BDBDBD;  /* Açık gri */
-        --nav-bg: rgba(30, 30, 30, 0.98);  /* Şeffaf siyah */
-        --card-bg: #2D2D2D;  /* Koyu gri */
-        --dark-color: #FFFFFF;  /* Beyaz */
-        --footer-bg: #2D2D2D;  /* Koyu gri */
-        --footer-text: #FFFFFF;  /* Beyaz */
-        --hero-gradient: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);  /* Koyu yeşil tonları */
-        --timeline-dot-bg: var(--primary-color);
-        --timeline-line-bg: rgba(255, 255, 255, 0.1);
-        --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    body {
-        background-color: var(--bg-soft);
-        color: var(--text-primary);
-    }
-
-    .navbar {
-        background-color: var(--nav-bg) !important;
-    }
-
-    .nav-link {
-        color: var(--text-secondary);
-    }
-
-    .nav-link:hover, .nav-link.active {
-        color: var(--primary-color);
-    }
-
-    .card {
-        background-color: var(--card-bg);
-        color: var(--text-primary);
-        box-shadow: var(--card-shadow);
-    }
-
-    .card:hover {
-        box-shadow: var(--card-hover-shadow);
-    }
-
-    .form-control {
-        background-color: var(--card-bg);
-        color: var(--text-primary);
-        border-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .form-control:focus {
-        background-color: var(--card-bg);
-        color: var(--text-primary);
-        border-color: var(--primary-color);
-    }
-
-    .btn-outline-dark {
-        color: var(--text-primary);
-        border-color: var(--text-primary);
-    }
-
-    .btn-outline-dark:hover {
-        background-color: var(--text-primary);
-        color: var(--bg-soft);
-    }
-
-    footer {
-        background-color: var(--footer-bg) !important;
-        color: var(--footer-text);
-    }
-
-    .project-overlay {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.95) 100%);
-    }
-
-    .tech-badge {
-        background: rgba(255, 255, 255, 0.1);
-        color: var(--text-primary);
-    }
-
-    .timeline::before {
-        background-color: var(--timeline-line-bg);
-    }
-
-    .timeline-dot {
-        background-color: var(--timeline-dot-bg);
-        border-color: var(--bg-soft);
-    }
-
-    .section-header::after {
-        background-color: var(--primary-color);
-    }
-
-    .hero-section {
-        background: var(--hero-gradient);
-    }
-
-    .blog-card .card-title {
-        color: var(--text-primary);
-    }
-
-    .blog-card .card-text {
-        color: var(--text-secondary);
-    }
-
-    .blog-meta {
-        color: var(--text-secondary);
-    }
-
-    .social-links a {
-        background-color: var(--card-bg);
-        color: var(--text-primary);
-    }
-
-    .social-links a:hover {
-        background-color: var(--primary-color);
-        color: #ffffff;
-    }
-
-    .tech-card {
-        background-color: var(--card-bg);
-    }
-
-    .tech-card .progress {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .experience-content {
-        background-color: var(--card-bg);
-    }
-
-    .experience-header h4 {
-        color: var(--text-primary);
-    }
-
-    .experience-list li {
-        color: var(--text-secondary);
-    }
-
-    .section-title .subtitle {
-        color: var(--text-secondary);
-    }
-
-    .about-text {
-        color: var(--text-secondary);
-    }
-
-    .typed-container {
-        color: var(--text-primary);
-    }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Temel Stiller */
 * {
@@ -191,11 +39,12 @@ html {
 
 body {
     padding-top: 76px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     color: var(--text-primary);
     background-color: var(--bg-soft);
-    line-height: 1.6;
+    line-height: 1.8;
     font-weight: 400;
+    font-size: 1.05rem;
 }
 
 /* Container Responsive */
@@ -241,64 +90,83 @@ body {
 }
 
 .navbar-brand {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
+    padding: 0.5rem 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .nav-link {
     color: var(--text-secondary);
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    margin: 0 0.25rem;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 1.05rem;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link.active {
     color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 80%;
 }
 
 /* Hero Section Responsive */
 .hero-section {
-    padding: clamp(2rem, 5vw, 4rem) 0;
-    min-height: calc(100vh - 76px);
-    display: flex;
-    align-items: center;
+    padding: 4rem 0;
+    background: var(--hero-gradient);
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.hero-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+.hero-content h1 {
     font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    color: var(--text-primary);
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
 }
 
-.hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+.hero-content .lead {
+    font-size: 1.25rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 /* Kart Stilleri */
 .card {
+    background: var(--card-bg);
     border: none;
     border-radius: 15px;
-    background: var(--card-bg);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--card-shadow);
     transition: all 0.3s ease;
-    overflow: hidden;
-    height: 100%;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-hover-shadow);
 }
 
 .card-img-overlay {
@@ -311,15 +179,14 @@ body {
 }
 
 .card-title {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
     font-weight: 600;
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
-    color: #fff;
 }
 
 .card-text {
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-secondary);
+    line-height: 1.8;
     margin-bottom: 1rem;
 }
 
@@ -379,34 +246,34 @@ body {
 }
 
 .form-control {
-    border: 2px solid rgba(108, 99, 255, 0.1);
+    border: 2px solid rgba(76, 175, 80, 0.1);
     border-radius: 10px;
     padding: 0.75rem;
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
     transition: all 0.3s ease;
 }
 
 .form-control:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
 }
 
 /* Responsive Butonlar */
 .btn {
-    padding: clamp(0.5rem, 1.5vw, 1rem) clamp(1rem, 3vw, 2rem);
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    padding: 0.75rem 1.5rem;
     border-radius: 10px;
     transition: all 0.3s ease;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .btn-primary {
     background-color: var(--primary-color);
     border: none;
+    color: white;
 }
 
 .btn-primary:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: #3d8b40;
     transform: translateY(-2px);
 }
 
@@ -471,7 +338,7 @@ body {
 
 /* Erişilebilirlik İyileştirmeleri */
 :focus {
-    outline: 3px solid rgba(108, 99, 255, 0.5);
+    outline: 3px solid rgba(76, 175, 80, 0.5);
     outline-offset: 2px;
 }
 
@@ -835,7 +702,7 @@ body {
 
 /* Özel Buton Stilleri */
 .btn {
-    font-weight: 500;
+    font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 12px;
     transition: all 0.3s ease;
@@ -1040,21 +907,20 @@ footer {
 }
 
 .experience-header h4 {
-    font-size: 1.2rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
 
 .company {
+    font-weight: 600;
     color: var(--primary-color);
-    font-weight: 500;
     margin-right: 1rem;
 }
 
 .period {
+    font-weight: 500;
     color: var(--text-secondary);
-    font-size: 0.9rem;
 }
 
 .experience-list {
@@ -1133,42 +999,56 @@ footer {
 /* Profil Fotoğrafı Stilleri */
 .profile-image-wrapper {
     position: relative;
-    display: inline-block;
-    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
 }
 
 .profile-image {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.profile-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border: 8px solid white !important;
+    position: relative;
+    z-index: 2;
 }
 
 .profile-image-wrapper::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
     border-radius: 50%;
-    background: linear-gradient(45deg, var(--primary-color), var(--info-color));
-    opacity: 0.1;
-    transform: scale(0.95);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    border: 2px solid var(--primary-color);
+    opacity: 0.3;
+    z-index: 1;
 }
 
-.profile-image-wrapper:hover::before {
-    transform: scale(1.05);
+.profile-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    border: 2px solid var(--secondary-color);
     opacity: 0.2;
+    z-index: 1;
+}
+
+.profile-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
     .profile-image-wrapper {
-        margin-top: 2rem;
+        margin: 2rem auto;
     }
     .profile-image {
         width: 250px !important;
@@ -1182,43 +1062,53 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     margin: 0 auto;
 }
 
 .about-profile-image {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-profile-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 8px solid white !important;
+    position: relative;
+    z-index: 2;
 }
 
 .about-image-wrapper::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 300px;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
     border-radius: 50%;
-    background: linear-gradient(45deg, var(--primary-color), var(--info-color));
-    opacity: 0.1;
-    z-index: -1;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    border: 2px solid var(--primary-color);
+    opacity: 0.3;
+    z-index: 1;
 }
 
-.about-image-wrapper:hover::before {
-    transform: translateX(-50%) scale(1.05);
+.about-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    border: 2px solid var(--secondary-color);
     opacity: 0.2;
+    z-index: 1;
+}
+
+.about-profile-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
 }
 
 @media (max-width: 768px) {
-    .about-image-wrapper::before {
-        width: 250px;
-        height: 250px;
+    .about-image-wrapper {
+        margin: 2rem auto;
     }
     .about-profile-image {
         width: 250px !important;
@@ -1253,7 +1143,8 @@ footer {
 .section-title .subtitle {
     display: block;
     margin-bottom: 1rem;
-    color: #6c757d;
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 .section-title .title {
@@ -1419,7 +1310,7 @@ section {
 .section-title .subtitle {
     display: block;
     margin-bottom: 1rem;
-    color: #6c757d;
+    color: var(--text-secondary);
 }
 
 .section-title .title {
@@ -1722,4 +1613,159 @@ section {
 
 .project-card:hover img {
     transform: scale(1.05);
+}
+
+/* Başlık Stilleri */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-primary);
+}
+
+.display-4 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Paragraf ve Metin Stilleri */
+p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Footer Yazı Stili */
+footer p {
+    font-weight: 500;
+}
+
+/* Form Etiketleri */
+.form-label {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Deneyim Timeline */
+.experience-header h4 {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.company {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.period {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.experience-list li {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Blog Kartları */
+.blog-card .card-title {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.blog-meta {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Section Başlıkları */
+.section-header {
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.section-title .subtitle {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Kart İçeriği */
+.card-title {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.card-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Section Başlıkları */
+.section-header {
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.section-title .subtitle {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Deneyim Timeline */
+.experience-header h4 {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.company {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.period {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.experience-list li {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Blog Kartları */
+.blog-card .card-title {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.blog-meta {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Form Etiketleri */
+.form-label {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Buton Yazı Stili */
+.btn {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Footer Yazı Stili */
+footer p {
+    font-weight: 500;
 } 
