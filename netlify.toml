@@ -1,16 +1,15 @@
 [build]
   command = "composer install && npm install && npm run build && php artisan key:generate"
   publish = "public"
-  functions = "netlify/functions"
+
+[build.environment]
+  PHP_VERSION = "8.2"
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
   to = "/index.php"
   status = 200
-
-[build.environment]
-  PHP_VERSION = "8.2"
-  NODE_VERSION = "18"
 
 main
 
