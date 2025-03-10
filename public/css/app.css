@@ -9,42 +9,43 @@
 }
 
 :root {
-    --primary-color: #4CAF50;
-    --secondary-color: #FF9800;
-    --success-color: #2E7D32;
-    --info-color: #03A9F4;
-    --warning-color: #FFC107;
-    --danger-color: #F44336;
+    /* Ana Renkler */
+    --primary-color: #2E7D32;  /* Daha koyu ve canlı yeşil */
+    --secondary-color: #FF6D00;  /* Daha canlı turuncu */
+    --success-color: #1B5E20;  /* Daha koyu yeşil */
+    --info-color: #0288D1;  /* Daha canlı mavi */
+    --warning-color: #FFA000;  /* Daha canlı sarı */
+    --danger-color: #D32F2F;  /* Daha canlı kırmızı */
     --light-color: #F5F5F5;
-    --dark-color: #2d3436;  /* Daha yumuşak koyu renk */
+    --dark-color: #212121;  /* Daha koyu siyah */
     --bg-soft: #FFFFFF;
-    --text-primary: #2d3436;
-    --text-secondary: #636e72;
+    --text-primary: #212121;  /* Daha koyu metin rengi */
+    --text-secondary: #424242;  /* Daha koyu ikincil metin rengi */
     --nav-bg: rgba(255, 255, 255, 0.98);
     --card-bg: #FFFFFF;
-    --footer-bg: #4CAF50;
+    --footer-bg: #1B5E20;  /* Daha koyu footer rengi */
     --footer-text: #FFFFFF;
-    --hero-gradient: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    --hero-gradient: linear-gradient(135deg, #E8F5E9 0%, #A5D6A7 100%);  /* Daha canlı gradyan */
     --timeline-dot-bg: var(--primary-color);
-    --timeline-line-bg: rgba(76, 175, 80, 0.2);
-    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --timeline-line-bg: rgba(46, 125, 50, 0.3);  /* Daha belirgin çizgi */
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);  /* Daha belirgin gölge */
+    --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);  /* Daha belirgin hover gölgesi */
     
     /* Mevsimsel Renk Şemaları */
-    --spring-primary: #4CAF50;
-    --spring-secondary: #FF9800;
+    --spring-primary: #2E7D32;  /* Daha canlı ilkbahar yeşili */
+    --spring-secondary: #FF6D00;  /* Daha canlı ilkbahar turuncusu */
     --spring-bg: #E8F5E9;
     
-    --summer-primary: #2196F3;
-    --summer-secondary: #FFC107;
+    --summer-primary: #0288D1;  /* Daha canlı yaz mavisi */
+    --summer-secondary: #FFA000;  /* Daha canlı yaz sarısı */
     --summer-bg: #E3F2FD;
     
-    --autumn-primary: #FF5722;
-    --autumn-secondary: #795548;
+    --autumn-primary: #D84315;  /* Daha canlı sonbahar turuncusu */
+    --autumn-secondary: #5D4037;  /* Daha canlı sonbahar kahverengisi */
     --autumn-bg: #FFF3E0;
     
-    --winter-primary: #03A9F4;
-    --winter-secondary: #90A4AE;
+    --winter-primary: #0277BD;  /* Daha canlı kış mavisi */
+    --winter-secondary: #455A64;  /* Daha canlı kış grisi */
     --winter-bg: #ECEFF1;
 }
 
@@ -98,7 +99,7 @@ body {
     background-color: rgba(255, 255, 255, 0.98) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     padding: 0.75rem 0;
     transition: all 0.3s ease;
     position: fixed;
@@ -126,7 +127,7 @@ body {
 
 .navbar-nav .nav-link {
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -139,7 +140,7 @@ body {
 
 .navbar-nav .nav-link.active {
     color: var(--primary-color);
-    background-color: rgba(76, 175, 80, 0.1);
+    background-color: rgba(46, 125, 50, 0.1);
 }
 
 .navbar-toggler {
@@ -177,7 +178,7 @@ body {
     }
 
     .navbar-nav .nav-link.active {
-        background-color: rgba(76, 175, 80, 0.1);
+        background-color: rgba(46, 125, 50, 0.1);
         border-radius: 8px;
     }
 }
@@ -367,7 +368,7 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: rgba(76, 175, 80, 0.1);
+    background-color: rgba(46, 125, 50, 0.1);
 }
 
 .contact-item .icon-box i {
@@ -385,7 +386,7 @@ section {
 }
 
 .contact-form .form-control {
-    border: 2px solid rgba(76, 175, 80, 0.1);
+    border: 2px solid rgba(46, 125, 50, 0.1);
     border-radius: 10px;
     padding: 0.75rem;
     transition: all 0.3s ease;
@@ -394,7 +395,7 @@ section {
 
 .contact-form .form-control:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
     background-color: #fff;
 }
 
@@ -688,7 +689,7 @@ footer p {
 }
 
 .form-control {
-    border: 2px solid rgba(76, 175, 80, 0.1);
+    border: 2px solid rgba(46, 125, 50, 0.1);
     border-radius: 10px;
     padding: 0.75rem;
     transition: all 0.3s ease;
@@ -696,7 +697,7 @@ footer p {
 
 .form-control:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
 }
 
 /* Responsive Butonlar */
@@ -715,8 +716,9 @@ footer p {
 }
 
 .btn-primary:hover {
-    background-color: #3d8b40;
+    background-color: #1B5E20;
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
 }
 
 /* Sosyal Medya İkonları */
@@ -780,7 +782,7 @@ footer p {
 
 /* Erişilebilirlik İyileştirmeleri */
 :focus {
-    outline: 3px solid rgba(76, 175, 80, 0.5);
+    outline: 3px solid rgba(46, 125, 50, 0.5);
     outline-offset: 2px;
 }
 
@@ -1300,7 +1302,7 @@ footer p {
     height: 100%;
     width: 2px;
     background: var(--primary-color);
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 .timeline-item {
@@ -2345,7 +2347,7 @@ footer p {
 }
 
 .season-spring .card {
-    border: 1px solid rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(46, 125, 50, 0.2);
 }
 
 /* Yaz Efektleri */
@@ -2358,7 +2360,7 @@ footer p {
 }
 
 .season-summer .card {
-    border: 1px solid rgba(33, 150, 243, 0.1);
+    border: 1px solid rgba(2, 136, 209, 0.2);
 }
 
 /* Sonbahar Efektleri */
@@ -2371,7 +2373,7 @@ footer p {
 }
 
 .season-autumn .card {
-    border: 1px solid rgba(255, 87, 34, 0.1);
+    border: 1px solid rgba(216, 67, 21, 0.2);
 }
 
 /* Kış Efektleri */
@@ -2384,7 +2386,7 @@ footer p {
 }
 
 .season-winter .card {
-    border: 1px solid rgba(3, 169, 244, 0.1);
+    border: 1px solid rgba(2, 119, 189, 0.2);
 }
 
 /* Mevsimsel Animasyonlar */
