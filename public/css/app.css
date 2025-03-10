@@ -338,9 +338,14 @@ section {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
 }
 
+.contact-item {
+    position: relative;
+}
+
 .contact-item .icon-box {
     width: 40px;
     height: 40px;
+    min-width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -350,6 +355,16 @@ section {
 
 .contact-item .icon-box i {
     font-size: 1.2rem;
+}
+
+.contact-item .contact-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-item .contact-text a {
+    display: inline-block;
+    word-break: break-word;
 }
 
 .contact-form .form-control {
@@ -373,14 +388,15 @@ section {
 }
 
 .social-links .btn {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
     transition: all 0.3s ease;
     background-color: #f8f9fa;
+    padding: 0;
 }
 
 .social-links .btn:hover {
@@ -397,17 +413,49 @@ section {
     .contact-info-card,
     .contact-form-card {
         margin-bottom: 1rem;
+        padding: 1.5rem !important;
+    }
+    
+    .contact-item {
+        margin-bottom: 1.25rem;
     }
     
     .contact-item .icon-box {
         width: 35px;
         height: 35px;
+        min-width: 35px;
+    }
+    
+    .contact-item .icon-box i {
+        font-size: 1rem;
+    }
+    
+    .contact-item .contact-text {
+        font-size: 0.95rem;
+    }
+    
+    .contact-item .h6 {
+        font-size: 0.9rem;
     }
     
     .social-links .btn {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         font-size: 1.1rem;
+    }
+    
+    .contact-form .form-control {
+        padding: 0.6rem;
+        font-size: 0.95rem;
+    }
+    
+    .contact-form .form-label {
+        font-size: 0.9rem;
+    }
+    
+    .contact-form button {
+        padding: 0.6rem !important;
+        font-size: 0.95rem;
     }
 }
 
