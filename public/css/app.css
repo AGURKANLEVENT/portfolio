@@ -29,6 +29,23 @@
     --timeline-line-bg: rgba(76, 175, 80, 0.2);
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Mevsimsel Renk Şemaları */
+    --spring-primary: #4CAF50;
+    --spring-secondary: #FF9800;
+    --spring-bg: #E8F5E9;
+    
+    --summer-primary: #2196F3;
+    --summer-secondary: #FFC107;
+    --summer-bg: #E3F2FD;
+    
+    --autumn-primary: #FF5722;
+    --autumn-secondary: #795548;
+    --autumn-bg: #FFF3E0;
+    
+    --winter-primary: #03A9F4;
+    --winter-secondary: #90A4AE;
+    --winter-bg: #ECEFF1;
 }
 
 body {
@@ -2303,4 +2320,106 @@ footer p {
         padding: 0.75rem 2rem !important;
         font-size: 1rem;
     }
+}
+
+/* Mevsimsel Arka Plan Efektleri */
+.seasonal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 0.5s ease;
+}
+
+/* İlkbahar Efektleri */
+.season-spring .seasonal-bg {
+    background: radial-gradient(circle at 50% 50%, var(--spring-bg) 0%, transparent 70%);
+}
+
+.season-spring .navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.season-spring .card {
+    border: 1px solid rgba(76, 175, 80, 0.1);
+}
+
+/* Yaz Efektleri */
+.season-summer .seasonal-bg {
+    background: radial-gradient(circle at 50% 50%, var(--summer-bg) 0%, transparent 70%);
+}
+
+.season-summer .navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.season-summer .card {
+    border: 1px solid rgba(33, 150, 243, 0.1);
+}
+
+/* Sonbahar Efektleri */
+.season-autumn .seasonal-bg {
+    background: radial-gradient(circle at 50% 50%, var(--autumn-bg) 0%, transparent 70%);
+}
+
+.season-autumn .navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.season-autumn .card {
+    border: 1px solid rgba(255, 87, 34, 0.1);
+}
+
+/* Kış Efektleri */
+.season-winter .seasonal-bg {
+    background: radial-gradient(circle at 50% 50%, var(--winter-bg) 0%, transparent 70%);
+}
+
+.season-winter .navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.season-winter .card {
+    border: 1px solid rgba(3, 169, 244, 0.1);
+}
+
+/* Mevsimsel Animasyonlar */
+@keyframes springFlower {
+    0% { transform: translateY(100%) rotate(0deg); opacity: 0; }
+    100% { transform: translateY(0) rotate(360deg); opacity: 0.1; }
+}
+
+@keyframes summerSun {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 0.1; }
+}
+
+@keyframes autumnLeaf {
+    0% { transform: translateX(-100%) rotate(0deg); opacity: 0; }
+    100% { transform: translateX(100%) rotate(360deg); opacity: 0.1; }
+}
+
+@keyframes winterSnow {
+    0% { transform: translateY(-100%) rotate(0deg); opacity: 0; }
+    100% { transform: translateY(100%) rotate(360deg); opacity: 0.1; }
+}
+
+.season-spring .seasonal-bg {
+    animation: springFlower 20s infinite linear;
+}
+
+.season-summer .seasonal-bg {
+    animation: summerSun 10s infinite alternate;
+}
+
+.season-autumn .seasonal-bg {
+    animation: autumnLeaf 15s infinite linear;
+}
+
+.season-winter .seasonal-bg {
+    animation: winterSnow 25s infinite linear;
 } 

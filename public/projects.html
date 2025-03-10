@@ -16,9 +16,35 @@
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
             document.documentElement.setAttribute('data-bs-theme', e.matches ? 'dark' : 'light');
         });
+
+        // Mevsim belirleme ve uygulama
+        function setSeason() {
+            const date = new Date();
+            const month = date.getMonth() + 1;
+            let season = '';
+
+            if (month >= 3 && month <= 5) {
+                season = 'spring';
+            } else if (month >= 6 && month <= 8) {
+                season = 'summer';
+            } else if (month >= 9 && month <= 11) {
+                season = 'autumn';
+            } else {
+                season = 'winter';
+            }
+
+            document.body.classList.remove('season-spring', 'season-summer', 'season-autumn', 'season-winter');
+            document.body.classList.add(`season-${season}`);
+        }
+
+        // Sayfa yüklendiğinde mevsimi belirle
+        window.addEventListener('load', setSeason);
     </script>
 </head>
 <body>
+    <!-- Mevsimsel Arka Plan -->
+    <div class="seasonal-bg"></div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
