@@ -9,12 +9,47 @@
     <link href="css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script>
+        // Karanlık mod algılama ve uygulama
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            document.documentElement.setAttribute('data-bs-theme', e.matches ? 'dark' : 'light');
+        });
+
+        // Mevsim belirleme ve uygulama
+        function setSeason() {
+            const date = new Date();
+            const month = date.getMonth() + 1;
+            let season = '';
+
+            if (month >= 3 && month <= 5) {
+                season = 'spring';
+            } else if (month >= 6 && month <= 8) {
+                season = 'summer';
+            } else if (month >= 9 && month <= 11) {
+                season = 'autumn';
+            } else {
+                season = 'winter';
+            }
+
+            document.body.classList.remove('season-spring', 'season-summer', 'season-autumn', 'season-winter');
+            document.body.classList.add(`season-${season}`);
+        }
+
+        // Sayfa yüklendiğinde mevsimi belirle
+        window.addEventListener('load', setSeason);
+    </script>
 </head>
 <body>
+    <!-- Mevsimsel Arka Plan -->
+    <div class="seasonal-bg"></div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand text-primary" href="index.html">
                 <i class="fas fa-code me-2"></i>AGLevent
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -23,22 +58,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link text-primary" href="index.html">
                             <i class="fas fa-home me-1"></i>Ana Sayfa
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">
+                        <a class="nav-link text-primary" href="about.html">
                             <i class="fas fa-user me-1"></i>Hakkımda
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="projects.html">
+                        <a class="nav-link text-primary" href="projects.html">
                             <i class="fas fa-project-diagram me-1"></i>Projeler
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">
+                        <a class="nav-link active text-primary fw-bold" href="contact.html">
                             <i class="fas fa-envelope me-1"></i>İletişim
                         </a>
                     </li>
@@ -48,12 +83,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section bg-primary bg-opacity-10">
         <div class="container">
             <div class="text-center" data-aos="fade-up">
                 <span class="badge bg-primary px-3 py-2 mb-3">İletişim</span>
-                <h1 class="display-4 fw-bold mb-4">Benimle İletişime Geçin</h1>
-                <p class="lead text-muted mb-5">Projeleriniz veya işbirliği fırsatları için benimle iletişime geçebilirsiniz</p>
+                <h1 class="display-4 fw-bold mb-4 text-primary">Benimle İletişime Geçin</h1>
+                <p class="lead text-primary mb-5">Projeleriniz veya işbirliği fırsatları için benimle iletişime geçebilirsiniz</p>
             </div>
         </div>
     </section>
@@ -68,54 +103,54 @@
                         <div class="col-md-5" data-aos="fade-right">
                             <div class="card h-100 border-0 shadow-sm">
                                 <div class="card-body p-4">
-                                    <h2 class="h3 fw-bold mb-4">İletişim Bilgileri</h2>
+                                    <h2 class="h3 fw-bold mb-4 text-primary">İletişim Bilgileri</h2>
                                     <div class="contact-info">
                                         <div class="d-flex align-items-center mb-4">
                                             <div class="icon-box me-3">
-                                                <div class="icon-wrapper bg-primary bg-opacity-10 rounded-3 p-3">
-                                                    <i class="fas fa-envelope text-primary"></i>
+                                                <div class="icon-wrapper bg-primary rounded-3 p-3">
+                                                    <i class="fas fa-envelope text-white"></i>
                                                 </div>
                                             </div>
                                             <div>
-                                                <h3 class="h6 fw-bold mb-1">E-posta</h3>
-                                                <a href="mailto:abdullahgurkanlevent@gmail.com" class="text-decoration-none text-muted">abdullahgurkanlevent@gmail.com</a>
+                                                <h3 class="h6 fw-bold mb-1 text-primary">E-posta</h3>
+                                                <a href="mailto:abdullahgurkanlevent@gmail.com" class="text-decoration-none text-primary">abdullahgurkanlevent@gmail.com</a>
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center mb-4">
                                             <div class="icon-box me-3">
-                                                <div class="icon-wrapper bg-primary bg-opacity-10 rounded-3 p-3">
-                                                    <i class="fas fa-phone text-primary"></i>
+                                                <div class="icon-wrapper bg-primary rounded-3 p-3">
+                                                    <i class="fas fa-phone text-white"></i>
                                                 </div>
                                             </div>
                                             <div>
-                                                <h3 class="h6 fw-bold mb-1">Telefon</h3>
-                                                <a href="tel:+905324000496" class="text-decoration-none text-muted">+90 532 400 04 96</a>
+                                                <h3 class="h6 fw-bold mb-1 text-primary">Telefon</h3>
+                                                <a href="tel:+905324000496" class="text-decoration-none text-primary">+90 532 400 04 96</a>
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center mb-4">
                                             <div class="icon-box me-3">
-                                                <div class="icon-wrapper bg-primary bg-opacity-10 rounded-3 p-3">
-                                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                                <div class="icon-wrapper bg-primary rounded-3 p-3">
+                                                    <i class="fas fa-map-marker-alt text-white"></i>
                                                 </div>
                                             </div>
                                             <div>
-                                                <h3 class="h6 fw-bold mb-1">Konum</h3>
-                                                <span class="text-muted">Bursa, Türkiye</span>
+                                                <h3 class="h6 fw-bold mb-1 text-primary">Konum</h3>
+                                                <span class="text-primary">Bursa, Türkiye</span>
                                             </div>
                                         </div>
-                                        <hr class="my-4">
-                                        <h3 class="h6 fw-bold mb-3">Sosyal Medya</h3>
+                                        <hr class="my-4 text-primary">
+                                        <h3 class="h6 fw-bold mb-3 text-primary">Sosyal Medya</h3>
                                         <div class="d-flex gap-2">
-                                            <a href="https://github.com/AGURKANLEVENT" target="_blank" class="btn btn-light rounded-circle p-2">
+                                            <a href="https://github.com/AGURKANLEVENT" target="_blank" class="btn btn-primary rounded-circle p-2">
                                                 <i class="fab fa-github"></i>
                                             </a>
-                                            <a href="https://www.linkedin.com/in/abdullah-gürkan-levent-" target="_blank" class="btn btn-light rounded-circle p-2">
+                                            <a href="https://www.linkedin.com/in/abdullah-gürkan-levent-" target="_blank" class="btn btn-primary rounded-circle p-2">
                                                 <i class="fab fa-linkedin"></i>
                                             </a>
-                                            <a href="#" class="btn btn-light rounded-circle p-2">
+                                            <a href="#" class="btn btn-primary rounded-circle p-2">
                                                 <i class="fab fa-twitter"></i>
                                             </a>
-                                            <a href="#" class="btn btn-light rounded-circle p-2">
+                                            <a href="#" class="btn btn-primary rounded-circle p-2">
                                                 <i class="fab fa-instagram"></i>
                                             </a>
                                         </div>
@@ -128,34 +163,34 @@
                         <div class="col-md-7" data-aos="fade-left">
                             <div class="card border-0 shadow-sm">
                                 <div class="card-body p-4">
-                                    <h2 class="h3 fw-bold mb-4">Mesaj Gönder</h2>
+                                    <h2 class="h3 fw-bold mb-4 text-primary">Mesaj Gönder</h2>
                                     <form id="contactForm" class="needs-validation" novalidate>
                                         <div class="row g-3">
                                             <div class="col-sm-6">
-                                                <label for="name" class="form-label">Adınız</label>
+                                                <label for="name" class="form-label text-primary">Adınız</label>
                                                 <div class="input-group">
-                                                    <span class="input-group-text bg-light border-0">
-                                                        <i class="fas fa-user text-muted"></i>
+                                                    <span class="input-group-text bg-primary text-white border-0">
+                                                        <i class="fas fa-user"></i>
                                                     </span>
-                                                    <input type="text" class="form-control border-0 bg-light" id="name" required>
+                                                    <input type="text" class="form-control border-0 bg-white" id="name" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
-                                                <label for="email" class="form-label">E-posta</label>
+                                                <label for="email" class="form-label text-primary">E-posta</label>
                                                 <div class="input-group">
-                                                    <span class="input-group-text bg-light border-0">
-                                                        <i class="fas fa-envelope text-muted"></i>
+                                                    <span class="input-group-text bg-primary text-white border-0">
+                                                        <i class="fas fa-envelope"></i>
                                                     </span>
-                                                    <input type="email" class="form-control border-0 bg-light" id="email" required>
+                                                    <input type="email" class="form-control border-0 bg-white" id="email" required>
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <label for="message" class="form-label">Mesajınız</label>
+                                                <label for="message" class="form-label text-primary">Mesajınız</label>
                                                 <div class="input-group">
-                                                    <span class="input-group-text bg-light border-0">
-                                                        <i class="fas fa-pencil-alt text-muted"></i>
+                                                    <span class="input-group-text bg-primary text-white border-0">
+                                                        <i class="fas fa-pencil-alt"></i>
                                                     </span>
-                                                    <textarea class="form-control border-0 bg-light" id="message" rows="5" required></textarea>
+                                                    <textarea class="form-control border-0 bg-white" id="message" rows="5" required></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -175,7 +210,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark text-white">
+    <footer class="py-4 bg-primary text-white">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
